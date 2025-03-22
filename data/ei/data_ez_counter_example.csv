@@ -1,4 +1,4 @@
-GEN_ID,Chromosome,Global_Start,Exon_End,label,B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11,B12
+GEN_ID,Chromosome,Global_Start,Exon_End,B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11,B12,label
 ENSG00000154646.9,21,18268517,,t,a,c,a,g,g,t,g,a,a,a,g,False
 ENSG00000154646.9,21,18268517,,a,a,a,g,g,g,t,a,a,a,g,a,False
 ENSG00000154646.9,21,18268517,,a,a,a,g,g,g,t,a,a,a,g,a,False
