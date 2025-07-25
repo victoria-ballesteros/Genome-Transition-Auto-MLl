@@ -24,7 +24,7 @@ Holds the **processed and labeled datasets**, ready for training.
   - `ze/` – Intergenic zone → First Exon transitions
   - `ez/` – Last Exon → Intergenic zone transitions
 
-Each subfolder contains cleaned CSV files suitable for feeding into machine learning models.
+Each subfolder contains cleaned CSV files suitable for feeding into machine learning algoritms.
 
 ---
 
