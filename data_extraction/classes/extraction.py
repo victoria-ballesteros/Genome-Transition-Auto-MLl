@@ -153,6 +153,14 @@ class Extraction:
             ei_test_false
         ) = self.ei_extractor.get_data()
 
+        ei_true = ei_true.sample(frac=0.1)
+        ei_ie_counter_example = ei_ie_counter_example.sample(frac=0.1)
+        ei_ie_true_counter_example = ei_ie_true_counter_example.sample(frac=0.1)
+        ei_ez_counter_example = ei_ez_counter_example.sample(frac=0.1)
+        ei_ze_counter_example = ei_ze_counter_example.sample(frac=0.1)
+        ei_negative = ei_negative.sample(frac=0.1)
+        ei_test_false = ei_test_false.sample(frac=0.1)
+
         ei_true.to_csv(
             f"{self.output_path}/ei/data_ei.csv", index=False,
             header=["GEN_ID", "Chromosome", "Global_Start", "Exon_End"] + [f"B{i + 1}" for i in range(12)] + ["label"]
@@ -193,6 +201,14 @@ class Extraction:
             ie_negative,
             ie_test_false
         ) = self.ie_extractor.get_data()
+
+        ie_true = ie_true.sample(frac=0.1)
+        ie_ei_counter_example = ie_ei_counter_example.sample(frac=0.1)
+        ie_ei_true_counter_example = ie_ei_true_counter_example.sample(frac=0.1)
+        ie_ez_counter_example = ie_ez_counter_example.sample(frac=0.1)
+        ie_ze_counter_example = ie_ze_counter_example.sample(frac=0.1)
+        ie_negative = ie_negative.sample(frac=0.1)
+        ie_test_false = ie_test_false.sample(frac=0.1)
 
         ie_true.to_csv(
             f"{self.output_path}/ie/data_ie.csv", index=False,
@@ -235,6 +251,12 @@ class Extraction:
             ze_negative
         ) = self.ze_extractor.get_data()
 
+        ze_true = ze_true.sample(frac=0.1)
+        ze_ei_counter_example = ze_ei_counter_example.sample(frac=0.1)
+        ze_ie_counter_example = ze_ie_counter_example.sample(frac=0.1)
+        ze_ez_counter_example = ze_ez_counter_example.sample(frac=0.1)
+        ze_negative = ze_negative.sample(frac=0.1)
+
         ze_true.to_csv(
             f"{self.output_path}/ze/data_ze.csv", index=False,
             header=["GEN_ID", "Chromosome", "Global_Start", "Exon_Start"] + [f"B{i + 1}" for i in range(550)] + [
@@ -267,6 +289,12 @@ class Extraction:
             ez_ze_counter_example,
             ez_negative
         ) = self.ez_extractor.get_data()
+
+        ez_true = ez_true.sample(frac=0.1)
+        ez_ei_counter_example = ez_ei_counter_example.sample(frac=0.1)
+        ez_ie_counter_example = ez_ie_counter_example.sample(frac=0.1)
+        ez_ze_counter_example = ez_ze_counter_example.sample(frac=0.1)
+        ez_negative = ez_negative.sample(frac=0.1)
 
         ez_true.to_csv(
             f"{self.output_path}/ez/data_ez.csv", index=False,
